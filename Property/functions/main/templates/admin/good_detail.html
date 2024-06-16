@@ -1,0 +1,8 @@
+<!-- admin/good_detail.html -->
+<h2>{{ good.name }}</h2>
+<p>Description: {{ good.description }}</p>
+<p>Price: {{ good.price }}</p>
+<p>Quantity: {{ good.quantity }}</p>
+<p>Image: {{good.image.url}}<p>
+<a href="{% url 'main:admin_good_edit' pk=good.pk %}">Edit Good</a>
+<a href="{% url 'main:admin_good_delete' pk=good.pk %}">Delete</a>

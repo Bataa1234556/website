@@ -1,0 +1,17 @@
+<!-- admin/good_add.html -->
+{% extends 'admin/admin_base.html' %}
+
+{% block content %}
+    <h2>Goods List</h2>
+    <ul>
+        {% for good in goods %}
+            <li>
+                <a href="{% url 'main:admin_good_detail' pk=good.pk %}">{{ good.name }}</a>
+                <a href="{% url 'main:admin_good_edit' pk=good.pk %}">Edit</a>
+                <a href="{% url 'main:admin_good_delete' pk=good.pk %}">Delete</a>
+            </li>
+        {% empty %}
+            <li>No goods found.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

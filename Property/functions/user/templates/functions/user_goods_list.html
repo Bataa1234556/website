@@ -1,0 +1,14 @@
+{% extends 'functions/user_base.html' %}
+
+{% block content %}
+    <h2>Available Goods</h2>
+    <ul>
+        {% for good in goods %}
+            <li>
+                <a href="{% url 'user:user_good_detail' pk=good.pk %}">{{ good.name }}</a>
+            </li>
+        {% empty %}
+            <li>No goods available.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,6 @@
+<!-- admin/good_edit.html -->
+<form action="{% url 'main:admin_good_edit' pk=good.pk %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+</form>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Admin Panel</h1>
+        </header>
+        <nav>
+            <ul>
+                <!-- Navigation links -->
+                <li><a href="{% url 'main:admin_goods_list' %}">Goods List</a></li>
+                <li><a href="{% url 'main:admin_good_new' %}">Add New Good</a></li>
+            </ul>
+        </nav>
+        <section>
+            <!-- Content block to be extended by child templates -->
+            {% block content %}{% endblock %}
+        </section>
+        <footer>
+            <!-- Footer content -->
+            <p>&copy; 2024 Your Company</p>
+        </footer>
+    </div>
+
+</body>
+</html>

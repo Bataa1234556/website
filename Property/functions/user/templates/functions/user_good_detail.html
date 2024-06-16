@@ -1,0 +1,8 @@
+{% extends 'functions/user_base.html' %}
+
+{% block content %}
+    <h2>{{ good.name }}</h2>
+    <p>Description: {{ good.description }}</p>
+    <p>Price: ${{ good.price }}</p>
+    <img src="{{ good.image.url }}" alt="{{ good.name }} Image">
+{% endblock %}

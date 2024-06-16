@@ -1,0 +1,7 @@
+<!-- admin/good_add.html -->
+<form action="{% url 'main:admin_good_new' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+</form>
+
